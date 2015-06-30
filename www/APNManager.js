@@ -37,4 +37,4 @@ APNManager.prototype.startAPNSettings = function(successCallback, errorCallback)
     cordova.exec(successCallback, errorCallback, "APNManager", "startAPNSettings", []);
 }
 
-module.exports = APNManager;
+module.exports = new APNManager();
