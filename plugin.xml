@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.eruipan.cordova.plugin.apnmanager"
+        version="0.0.1">
+
+  <name>APNManager</name>
+  <description>A Cordova plugin that manages APN(Access Point Name) configurations</description>
+
+  <engines>
+    <engine name="cordova" version=">=3.5.0"/>
+  </engines>
+
+  <js-module src="www/APNManager.js" name="APNManager">
+    <clobbers target="window.plugins.APNManager"/>
+  </js-module>
+
+  <!-- android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="APNManager">
+        <param name="android-package" value="com.eruipan.cordova.plugin.apnmanager.APNManager"/>
+      </feature>
+    </config-file>
+    <source-file src="src/android/APN.java" target-dir="src/com/eruipan/cordova/plugin/apnmanager"/>
+    <source-file src="src/android/APNSwitcher.java" target-dir="src/com/eruipan/cordova/plugin/apnmanager"/>
+    <source-file src="src/android/APNManager.java" target-dir="src/com/eruipan/cordova/plugin/apnmanager"/>
+  </platform>
+
+</plugin>
