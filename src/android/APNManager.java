@@ -20,7 +20,6 @@ public class APNManager extends CordovaPlugin {
 	
 	@Override
 	public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-		// TODO Auto-generated method stub
 		Log.i(APN_TAG, "The APNManager instance is initializing...");
 		super.initialize(cordova, webView);
 	}
