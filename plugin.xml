@@ -11,14 +11,14 @@
   </engines>
 
   <js-module src="www/APNManager.js" name="APNManager">
-    <clobbers target="APNManager" />
+    <clobbers target="window.plugins.APNManager" />
   </js-module>
 
   <!-- android -->
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="APNManager">
-        <param name="android-package" value="com.eruipan.cordova.plugin.apn.APNManager" />
+        <param name="android-package" value="com.eruipan.cordova.plugin.apn" />
       </feature>
     </config-file>
     <source-file src="src/android/APNManager.java" target-dir="src/com/eruipan/cordova/plugin/apn" />
