@@ -1,4 +1,4 @@
-package com.eruipan.cordova.plugin.apn;
+package com.eruipan.cordova.plugin.apnmanager;
 
 import java.util.ArrayList;
 
@@ -14,13 +14,11 @@ public class APNSwitcher {
 
 	private static String TAG = "APNSwitcher";
 	private static final Uri APN_CARRIERS_URI = Uri
-			.parse("content://telephony/carriers");// 所有的APN配配置信息位置
-	private static final Uri PREFERRED_APN_URI = Uri
-			.parse("content://telephony/carriers/preferapn");// 当前的APN
+			.parse("content://telephony/carriers");
+			.parse("content://telephony/carriers/preferapn");
 	private static String[] projection = { "_id", "apn", "type", "current",
 			"proxy", "port" };
 
-	// 获取当前APN
 	public static String getCurrAPNId(Context context) {
 		ContentResolver resoler = context.getContentResolver();
 		// String[] projection = new String[] { "_id" };
@@ -48,7 +46,6 @@ public class APNSwitcher {
 		return apn;
 	}
 
-	// 获取所有APN
 	public static ArrayList<APN> getAPNList(final Context context) {
 
 		ContentResolver contentResolver = context.getContentResolver();
@@ -79,9 +76,7 @@ public class APNSwitcher {
 		return apnList;
 	}
 
-	// 获取可用的APN
 	public static ArrayList<APN> getAvailableAPNList(final Context context) {
-		// current不为空表示可以使用的APN
 		ContentResolver contentResolver = context.getContentResolver();
 		Cursor cr = contentResolver.query(APN_CARRIERS_URI, projection,
 				"current is not null", null, null);
@@ -113,7 +108,6 @@ public class APNSwitcher {
 		 cv.put("apn", apnName);
 		 cv.put("apn_id", apnId);
 //		 cv.put("type", "");
-		// 更新系统数据库，改变移动网络状态
 		 resolver.update(PREFERRED_APN_URI, cv, null, null);
 		 Log.e(TAG, "setApn");
 		 Log.e(TAG, "id: " + apnId);
@@ -148,7 +142,7 @@ public class APNSwitcher {
 		int apnId = -1;
         ContentResolver resolver = context.getContentResolver();
         ContentValues cv = new ContentValues();
-        cv.put("name", "版纳移动专网");
+        cv.put("name", "閻楀牏鎾肩粔璇插З娑撴挾缍�);
         cv.put("apn", "bngdt.yn");
         cv.put("type", "default,supl,net");
         cv.put("mcc", "460");

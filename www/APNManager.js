@@ -2,7 +2,7 @@
  * @author Wnag Rui
  * @email wangenglishkl@126.com
  */
-cordova.define("com.eruipan.cordova.plugin.apn.APNManager", function(require, exports, module) { 
+cordova.define("com.eruipan.cordova.plugin.apnmanager.APNManager", function(require, exports, module) { 
 var argscheck = require('cordova/argscheck'),
     utils = require('cordova/utils'),
     exec = require('cordova/exec');

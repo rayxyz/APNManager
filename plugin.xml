@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="com.eruipan.cordova.plugin.apn"
+        id="com.eruipan.cordova.plugin.apnmanager"
         version="0.0.1">
 
   <name>APNManager</name>
@@ -18,12 +18,12 @@
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="APNManager">
-        <param name="android-package" value="com.eruipan.cordova.plugin.apn.APNManager"/>
+        <param name="android-package" value="com.eruipan.cordova.plugin.apnmanager.APNManager"/>
       </feature>
     </config-file>
-    <source-file src="src/android/APN.java" target-dir="src/com/eruipan/cordova/plugin/apn"/>
-    <source-file src="src/android/APNSwitcher.java" target-dir="src/com/eruipan/cordova/plugin/apn"/>
-    <source-file src="src/android/APNManager.java" target-dir="src/com/eruipan/cordova/plugin/apn"/>
+    <source-file src="src/android/APN.java" target-dir="src/com/eruipan/cordova/plugin/apnmanager"/>
+    <source-file src="src/android/APNSwitcher.java" target-dir="src/com/eruipan/cordova/plugin/apnmanager"/>
+    <source-file src="src/android/APNManager.java" target-dir="src/com/eruipan/cordova/plugin/apnmanager"/>
   </platform>
 
 </plugin>

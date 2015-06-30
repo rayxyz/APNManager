@@ -1,4 +1,4 @@
-package com.eruipan.cordova.plugin.apn;
+package com.eruipan.cordova.plugin.apnmanager;
 
 public class APN {
 	 private String id;  
