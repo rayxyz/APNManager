@@ -21,6 +21,8 @@
         <param name="android-package" value="com.eruipan.cordova.plugin.apn.APNManager"/>
       </feature>
     </config-file>
+    <source-file src="src/android/APN.java" target-dir="src/com/eruipan/cordova/plugin/apn"/>
+    <source-file src="src/android/APNSwitcher.java" target-dir="src/com/eruipan/cordova/plugin/apn"/>
     <source-file src="src/android/APNManager.java" target-dir="src/com/eruipan/cordova/plugin/apn"/>
   </platform>
 
